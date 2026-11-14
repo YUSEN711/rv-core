@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.sv": "systemverilog",
+    "*.svh": "systemverilog"
+  },
+  "verilog.linting.linter": "verilator",
+  "verilog.linting.verilator.arguments": "-Wall -Wno-UNUSEDSIGNAL -Wno-UNUSEDPARAM -Wno-DECLFILENAME rtl/core_pkg.sv",
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "editor.rulers": [100],
+  "files.trimTrailingWhitespace": true
+}

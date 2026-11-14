@@ -1,0 +1,14 @@
+# 每次 push 自動跑單元測試（用 Icarus，因為 Ubuntu apt 的 Verilator 版本太舊）
+name: ci
+on: [push, pull_request]
+jobs:
+  unit-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y iverilog
+      - run: pip install "cocotb>=2.0"
+      - run: make test-unit SIM=icarus

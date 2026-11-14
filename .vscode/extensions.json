@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "mshr-h.veriloghdl",
+    "chipsalliance.verible",
+    "surfer-project.surfer",
+    "ms-python.python",
+    "ms-vscode.cpptools",
+    "ms-vscode-remote.remote-ssh"
+  ]
+}
