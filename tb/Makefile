@@ -17,6 +17,10 @@ else ifeq ($(TEST),regfile)
   VERILOG_SOURCES     = $(PKG) $(RTL)/regfile.sv
   COCOTB_TOPLEVEL     = regfile
   COCOTB_TEST_MODULES = test_regfile
+else ifeq ($(TEST),decoder)
+  VERILOG_SOURCES     = $(PKG) $(RTL)/decoder.sv
+  COCOTB_TOPLEVEL     = decoder
+  COCOTB_TEST_MODULES = test_decoder
 else ifeq ($(TEST),core)
   VERILOG_SOURCES     = $(PKG) $(RTL)/alu.sv $(RTL)/regfile.sv $(RTL)/mem.sv \
                         $(RTL)/core_top.sv $(abspath tb_top.sv)

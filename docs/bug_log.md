@@ -23,3 +23,14 @@
 - **Debug**：錯誤出在 `verilated_fst_c.cpp`，表示是 FST 波形功能需要 lz4
 - **Root cause**：FST 是壓縮格式，需要 lz4 函式庫，Mac 上的編譯器找不到它的標頭檔
 - **預防**：改用 VCD（`--trace`），不需要額外函式庫
+
+## Phase 1：Decoder
+
+### B1-1 接腳清單用了分號
+- **症狀**：%Error: /Users/yusentuan/CPU/rv-core/rtl/decoder.sv:5:25: syntax error, unexpected ';', expecting ')'
+    5 |     input word_t   instr;
+      |                         ^
+        ... See the manual at https://verilator.org/verilator_doc.html?v=5.054 for more assistance.
+- **Debug**：把逗號打成分號
+- **Root cause**：
+- **預防**：
